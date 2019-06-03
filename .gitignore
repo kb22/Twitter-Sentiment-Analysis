@@ -1,0 +1,9 @@
+# Virtual environment folders
+/etc
+/bin
+/lib
+/share
+/include
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints
