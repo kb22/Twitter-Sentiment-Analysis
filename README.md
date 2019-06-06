@@ -3,6 +3,16 @@ The repo includes code to process text, engineer features and perform sentiment 
 
 ## Setup
 
+### Install python
+1. Install pyenv for managing Python versions
+```
+brew install pyenv
+```
+2. Install python with this flag
+```
+CFLAGS="-I$(xcrun --show-sdk-path)/usr/include" pyenv install 3.7.2
+```
+
 ### Get the code
 1. Clone the repo to your machine
 ```
