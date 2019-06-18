@@ -30,7 +30,7 @@ def expand_tweet(tweet):
 	return expanded_tweet
 
 # Function to process tweets
-def clean_tweet(data, wordNetLemmatizer, porterStemmer, tdIdfVectorizer, type):
+def clean_tweet(data, wordNetLemmatizer, porterStemmer):
 	data['Clean_tweet'] = data['Tweet']
 	print(colored("Removing user handles starting with @", "yellow"))
 	data['Clean_tweet'] = data['Clean_tweet'].str.replace("@[\w]*","")
@@ -60,10 +60,10 @@ porterStemmer = PorterStemmer()
 
 # Pre-processing the tweets
 print(colored("Processing train data", "green"))
-train_data = clean_tweet(train_data, wordNetLemmatizer, porterStemmer, tdIdfVectorizer, 'train')
+train_data = clean_tweet(train_data, wordNetLemmatizer, porterStemmer)
 train_data.to_csv('data/clean_train.csv', index = False)
 print(colored("Train data processed and saved to data/clean_train.csv", "green"))
 print(colored("Processing test data", "green"))
-test_data = clean_tweet(test_data, wordNetLemmatizer, porterStemmer, tdIdfVectorizer, 'train')
+test_data = clean_tweet(test_data, wordNetLemmatizer, porterStemmer)
 test_data.to_csv('data/clean_test.csv', index = False)
 print(colored("Test data processed and saved to data/clean_test.csv", "green"))
