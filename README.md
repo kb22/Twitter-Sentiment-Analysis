@@ -42,7 +42,26 @@ The Jupyter notebook **Dataset analysis.ipynb** includes analysis for the variou
 ```
 jupyter notebook
 ```
-2. Select the file **Dataset analysis.ipynb** from the list
+2. Select the file **Dataset analysis.ipynb** from the list to see dataset analysis.
+
+### Twitter Sentiment Analysis
+The whole project is broken into different Python files from splitting the dataset to actually doing sentiment analysis. The steps to carry out Twitter Sentiment Analysis are:
+1. Run the file `train-test-split.py` to split the Twitter dataset into training and testing data.
+```
+python train-test-split.py
+```
+2. Run the file `preprocessing.py` to process the tweets.
+- Remove @user mentions
+- Remove non-alphabetic characters + spaces + apostrophe
+- Remove links
+- Remove single characters
+- Remove stopwords
+- Lemmatize words
+- Stem words
+```
+python preprocessing.py
+```
+
 
 
 
