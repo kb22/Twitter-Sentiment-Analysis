@@ -1,5 +1,5 @@
 # Twitter Sentiment Analysis using Neural Networks
-The repo includes code to process text, engineer features and perform sentiment analysis using Neural Networks.
+The repo includes code to process text, engineer features and perform sentiment analysis using Neural Networks. The project uses **LSTM** to train on the data and achieves a **testing accuracy of 79%**.
 
 ## Setup
 
@@ -60,6 +60,10 @@ python train-test-split.py
 - Stem words
 ```
 python preprocessing.py
+```
+3. After processing of the tweets, **LSTM** can be used to train on the data and test the accuracy on the test data.
+```
+python lstm.py
 ```
 
 
